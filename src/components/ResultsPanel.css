@@ -1,0 +1,255 @@
+.results-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(40, 40, 40, 0.98);
+  border: 2px solid var(--green);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  transition: all 0.3s ease;
+}
+
+.live-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stat-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(104, 157, 106, 0.3);
+}
+
+.stat-group:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--fg-color);
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.unit {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.grade-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.grade {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--orange);
+  padding: 2px 8px;
+  background: rgba(214, 93, 14, 0.1);
+  border-radius: 6px;
+  border: 1px solid var(--orange);
+}
+
+.grade.large {
+  font-size: 2rem;
+  padding: 8px 16px;
+}
+
+.grade-message {
+  font-size: 0.8rem;
+  color: var(--aqua);
+  font-style: italic;
+}
+
+.final-results {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.final-header h2 {
+  color: var(--green);
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(128, 255, 128, 0.3);
+}
+
+.final-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.final-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(104, 157, 106, 0.1);
+  border-radius: 8px;
+  border: 1px solid var(--aqua);
+}
+
+.final-stat-label {
+  font-size: 0.95rem;
+  color: var(--fg-color);
+  font-weight: 600;
+}
+
+.final-stat-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.final-grade {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .results-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 90%;
+    margin: 0;
+    padding: 25px;
+  }
+  
+  .final-results {
+    animation: slideIn 0.5s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-panel {
+    padding: 15px;
+  }
+  
+  .stat-value {
+    font-size: 1.2rem;
+  }
+  
+  .grade {
+    font-size: 1.2rem;
+    padding: 2px 6px;
+  }
+  
+  .final-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .final-stat-value {
+    font-size: 1.1rem;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .results-panel {
+    border-width: 3px;
+    background: var(--bg-color);
+  }
+  
+  .grade {
+    background: var(--orange);
+    color: var(--bg-color);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .final-results {
+    animation: none;
+  }
+}
+
+/* Export PDF Button Styles */
+.export-actions {
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid var(--aqua);
+}
+
+.export-pdf-btn {
+  background: linear-gradient(135deg, var(--orange) 0%, #b8540a 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(214, 93, 14, 0.3);
+}
+
+.export-pdf-btn:hover {
+  background: linear-gradient(135deg, #d65d0e 0%, var(--orange) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(214, 93, 14, 0.4);
+}
+
+.export-pdf-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(214, 93, 14, 0.3);
+}
+
+.export-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive styles for export button */
+@media (max-width: 480px) {
+  .export-pdf-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

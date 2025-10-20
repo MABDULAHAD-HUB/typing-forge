@@ -1,0 +1,208 @@
+/*
+ * Grading Information Styles - Typing Test Application
+ * Copyright (c) 2025 M ABDUL AHAD. All rights reserved.
+ */
+
+.grading-info {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(40, 40, 40, 0.95);
+  border: 2px solid var(--aqua);
+  border-radius: 12px;
+  min-width: 200px;
+  max-width: 350px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.grading-info.expanded {
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.grading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.grading-header:hover {
+  background: rgba(104, 157, 106, 0.1);
+}
+
+.grading-title {
+  font-weight: 600;
+  color: var(--aqua);
+  font-size: 1rem;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--orange);
+  width: 20px;
+  text-align: center;
+}
+
+.grading-content {
+  padding: 0 16px 16px 16px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.grades-section {
+  margin-bottom: 0;
+}
+
+.grades-section h4 {
+  color: var(--green);
+  font-size: 0.9rem;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.grade-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grade-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.grade-item:hover {
+  background: rgba(104, 157, 106, 0.05);
+}
+
+.grade-badge {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  min-width: 28px;
+  text-align: center;
+  color: var(--bg-color);
+}
+
+.grade-badge.a-plus {
+  background: linear-gradient(135deg, var(--green), #00ff00);
+}
+
+.grade-badge.a {
+  background: linear-gradient(135deg, var(--aqua), var(--green));
+}
+
+.grade-badge.b {
+  background: linear-gradient(135deg, var(--yellow), var(--aqua));
+}
+
+.grade-badge.c {
+  background: linear-gradient(135deg, var(--orange), var(--yellow));
+}
+
+.grade-badge.d {
+  background: linear-gradient(135deg, var(--red), var(--orange));
+}
+
+.grade-range {
+  font-size: 0.8rem;
+  color: var(--fg-color);
+  font-weight: 600;
+  min-width: 45px;
+}
+
+.grade-desc {
+  font-size: 0.75rem;
+  color: var(--fg-color);
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grading-info {
+    bottom: 15px;
+    right: 15px;
+    min-width: 180px;
+    max-width: 280px;
+    font-size: 0.85rem;
+  }
+  
+  .grading-info.expanded {
+    max-width: 300px;
+  }
+  
+  .grading-header {
+    padding: 10px 14px;
+  }
+  
+  .grading-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grading-info {
+    bottom: 10px;
+    right: 10px;
+    min-width: 160px;
+    max-width: 250px;
+    font-size: 0.8rem;
+  }
+  
+  .grading-info.expanded {
+    max-width: 280px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .grading-content {
+    max-height: 300px;
+  }
+  
+  .grade-badge {
+    font-size: 0.75rem;
+    min-width: 24px;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .grading-info {
+    background: var(--bg-color);
+    border-width: 3px;
+  }
+  
+  .grade-badge {
+    border: 2px solid white;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .grading-info {
+    transition: none;
+  }
+  
+  .grading-header {
+    transition: none;
+  }
+  
+  .grade-item {
+    transition: none;
+  }
+}

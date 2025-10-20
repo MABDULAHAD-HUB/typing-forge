@@ -1,0 +1,162 @@
+/*
+ * Footer Styles - Typing Test Application
+ * Copyright (c) 2025 M ABDUL AHAD. All rights reserved.
+ */
+
+.app-footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  border-top: 3px solid var(--aqua);
+  color: var(--fg-color);
+  padding: 20px;
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--green) 20%, var(--aqua) 50%, var(--orange) 80%, transparent 100%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.developer-section {
+  text-align: center;
+}
+
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.developed-by {
+  font-size: 0.9rem;
+  color: var(--aqua);
+  opacity: 0.9;
+}
+
+.developer-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--orange);
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(214, 93, 14, 0.3);
+}
+
+.copyright-info {
+  font-size: 0.85rem;
+  color: var(--fg-color);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-footer {
+    padding: 15px 10px;
+  }
+  
+  .footer-content {
+    padding: 0 10px;
+    gap: 12px;
+  }
+  
+  .developer-name {
+    font-size: 1rem;
+  }
+  
+  .developed-by {
+    font-size: 0.8rem;
+  }
+  
+  .copyright-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-footer {
+    padding: 15px 10px;
+  }
+  
+  .footer-content {
+    padding: 0 5px;
+    gap: 10px;
+  }
+  
+  .developer-name {
+    font-size: 0.95rem;
+  }
+  
+  .developed-by {
+    font-size: 0.75rem;
+  }
+  
+  .copyright-info {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .developer-name {
+    font-size: 0.9rem;
+  }
+  
+  .developed-by {
+    font-size: 0.7rem;
+  }
+  
+  .copyright-info {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .app-footer {
+    background: var(--bg-color);
+    border-top-width: 4px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .app-footer::before {
+    animation: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .app-footer {
+    background: white !important;
+    color: black !important;
+    border-top: 2px solid black;
+  }
+  
+  .app-footer::before {
+    display: none;
+  }
+}

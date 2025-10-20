@@ -1,0 +1,96 @@
+/*
+ * Main Application Styles - TypingForge
+ * Copyright (c) 2025 M ABDUL AHAD. All rights reserved.
+ * 
+ * Developer: M ABDUL AHAD
+ * TypingForge - Where Typing Skills Are Forged
+ */
+
+:root {
+  --bg-color: #282828;
+  --fg-color: #ebdbb2;
+  --red: rgb(255, 26, 26);
+  --green: rgb(128, 255, 128);
+  --aqua: #689d6a;
+  --orange: #d65d0e;
+  --blue: #458588;
+  --purple: #b16286;
+  --yellow: #d79921;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  color: var(--fg-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://wallpaperaccess.com/full/3703256.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--aqua);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 5px;
+  }
+}
