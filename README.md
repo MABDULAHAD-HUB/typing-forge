@@ -1,6 +1,7 @@
 
 # TypingForge 🔥
 
+
 <div align="center">
   <img src="public/logo.svg" alt="TypingForge Logo" width="200" height="60">
   
@@ -10,6 +11,8 @@
   [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   [![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+  
+  [Live demo](https://mabdulahad-hub.github.io/typing-forge/)
 </div>
 
 ## 🌟 Overview
