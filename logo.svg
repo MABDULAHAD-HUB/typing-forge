@@ -1,0 +1,64 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Green and orange gradients -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8c00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6347;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Ring gradient with full green -->
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#32cd32;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#32cd32;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#32cd32;stop-opacity:0.5" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer orbital ring -->
+  <ellipse cx="30" cy="30" rx="25" ry="15" fill="none" stroke="url(#ringGradient)" stroke-width="1.5" opacity="0.6" transform="rotate(30 30 30)"/>
+  
+  <!-- Middle orbital ring -->
+  <ellipse cx="30" cy="30" rx="20" ry="12" fill="none" stroke="url(#ringGradient)" stroke-width="1.5" opacity="0.7" transform="rotate(-45 30 30)"/>
+  
+  <!-- Inner orbital ring -->
+  <ellipse cx="30" cy="30" rx="15" ry="9" fill="none" stroke="url(#ringGradient)" stroke-width="1.5" opacity="0.8" transform="rotate(75 30 30)"/>
+  
+  <!-- Central core circle -->
+  <circle cx="30" cy="30" r="8" fill="url(#primaryGradient)" filter="url(#glow)"/>
+  
+  <!-- Central keyboard key icon -->
+  <rect x="26" y="26" width="8" height="8" rx="2" fill="#2d2d2d" stroke="#f0f0f0" stroke-width="0.5"/>
+  <text x="30" y="31.5" font-family="JetBrains Mono, monospace" font-size="6" font-weight="bold" fill="#f0f0f0" text-anchor="middle">T</text>
+  
+  <!-- Orbiting elements (like electrons) -->
+  <circle cx="45" cy="20" r="2" fill="#32cd32" opacity="0.9">
+    <animateTransform attributeName="transform" type="rotate" values="0 30 30;360 30 30" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="15" cy="40" r="1.5" fill="#7cfc00" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0 30 30;-360 30 30" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="42" cy="42" r="1.8" fill="#ff8c00" opacity="0.9">
+    <animateTransform attributeName="transform" type="rotate" values="0 30 30;360 30 30" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Company name with modern typography -->
+  <text x="70" y="25" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#32cd32">TYPING</text>
+  <text x="70" y="42" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="url(#primaryGradient)">FORGE</text>
+  
+  <!-- Performance indicator dots -->
+  <circle cx="70" cy="48" r="2" fill="#32cd32" opacity="0.8"/>
+  <circle cx="76" cy="48" r="2" fill="#7cfc00" opacity="0.8"/>
+  <circle cx="82" cy="48" r="2" fill="#ff8c00" opacity="0.8"/>
+  <circle cx="88" cy="48" r="2" fill="#ff6347" opacity="0.6"/>
+</svg>

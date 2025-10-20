@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/typing-forge/static/css/main.cedf9bbc.css",
+    "main.js": "/typing-forge/static/js/main.9dd86717.js",
+    "static/js/453.70210f7f.chunk.js": "/typing-forge/static/js/453.70210f7f.chunk.js",
+    "index.html": "/typing-forge/index.html",
+    "main.cedf9bbc.css.map": "/typing-forge/static/css/main.cedf9bbc.css.map",
+    "main.9dd86717.js.map": "/typing-forge/static/js/main.9dd86717.js.map",
+    "453.70210f7f.chunk.js.map": "/typing-forge/static/js/453.70210f7f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cedf9bbc.css",
+    "static/js/main.9dd86717.js"
+  ]
+}
