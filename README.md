@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# typing-forge
-typingforge is a modern React app for professional typing speed and accuracy assessment, featuring real-time metrics, grading, and a sleek, responsive interface.
-=======
+
 # TypingForge 🔥
 
 <div align="center">
@@ -46,8 +43,8 @@ TypingForge is a modern, professional typing speed and accuracy assessment appli
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/MABDULAHAD-02/typing-test.git
-   cd typing-test
+   git clone https://github.com/MABDULAHAD-HUB/typing-forge.git
+   cd typing-forge
    ```
 
 2. **Install dependencies**
@@ -82,7 +79,7 @@ TypingForge is a modern, professional typing speed and accuracy assessment appli
 
 **M ABDUL AHAD**
 - GitHub: [@MABDULAHAD-02](https://github.com/MABDULAHAD-02)
-- Project: [TypingForge](https://github.com/MABDULAHAD-02/typing-test)
+ - Project: [TypingForge](https://github.com/MABDULAHAD-HUB/typing-forge)
 
 ---
 
