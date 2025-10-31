@@ -32,7 +32,7 @@ const Header = ({ currentPage, onPageChange }) => {
         <div className="brand-section">
           <div className="brand-logo">
             <img 
-              src={process.env.PUBLIC_URL + '/logo.svg'} 
+              src=/logo.svg
               alt="TypingForge Logo" 
               className="logo-svg"
               width="200"
