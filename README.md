@@ -93,4 +93,3 @@ TypingForge is a modern, professional typing speed and accuracy assessment appli
 *Built with ❤️ using React*
 
 </div>
->>>>>>> 6abf79d (Initial commit)
